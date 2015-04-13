@@ -1,0 +1,51 @@
+{
+  "manifest_version": 2,
+  "name": "MarkView",
+  "version": "0.10.0",
+  "description": "A handy Markdown Extra viewer for Chrome.",
+  "author": "[Jon Ruttan](jonruttan@gmail.com)",
+  "icons": {
+    "128": "assets/images/icon.png",
+    "16": "assets/images/icon.png",
+    "48": "assets/images/icon.png"
+  },
+  "permissions": ["identity", "tabs", "\u003Call_urls\u003E"],
+  "content_scripts": [{
+    "js": [
+      "/vendor/jquery/dist/jquery.min.js",
+      "/vendor/angular/angular.min.js",
+      "/vendor/angular-resource/angular-resource.min.js",
+      "/vendor/angular-scroll/angular-scroll.min.js",
+      "/vendor/angular-ui-bootstrap-bower/ui-bootstrap-tpls.min.js",
+      "/vendor/angular-ui-select/dist/select.min.js",
+      "/vendor/ng-lodash/build/ng-lodash.min.js",
+      "/vendor/lodash/dist/lodash.min.js",
+      "/vendor/underscore-db/dist/underscore-db.min.js",
+      "/vendor/highlightjs/highlight.pack.js",
+      "/vendor/pagedown/Markdown.Converter.js",
+      "/vendor/pagedown-extra/Markdown.Extra.js",
+      "/vendor/yaml.js/dist/yaml.legacy.js",
+      "/dist/markdown-interface.js",
+      "/dist/syntax-highlighter.js",
+      "/dist/application.js"
+    ],
+    "matches": [
+      "*://*/*.md", "file://*/*.md",
+      "*://*/*.markdown", "file://*/*.markdown",
+      "*://*/*.mdown", "file://*/*.mdown",
+      "*://*/*.mkdn", "file://*/*.mkdn",
+      "*://*/*.mkd", "file://*/*.mkd",
+      "*://*/*.text", "file://*/*.text",
+      "*://*/*.mdtext", "file://*/*.mdtext",
+      "*://*/*.mdtxt", "file://*/*.mdtxt",
+      "*://*/*.litcoffee", "file://*/*.litcoffee"
+    ],
+    "run_at": "document_start"
+  }],
+  "content_security_policy": "script-src 'self'; object-src 'self'",
+  "web_accessible_resources": [
+    "assets/*",
+    "/vendor/*",
+    "manifest.json"
+  ]
+}

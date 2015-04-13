@@ -1,0 +1,32 @@
+<div class="modal-header">
+  <button type="button" class="close" data-ng-click="close()" aria-hidden="true">&times;</button>
+  <h4 class="modal-title" ng-controller="appController">{{manifest.name}} Options</h4>
+</div>
+
+<div class="modal-body">
+
+  <form class="form-horizontal">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">Syntax Highlighting</div>
+
+      <div class="panel-body">
+        <ui-select ng-model="syntaxHighlight.style">
+          <ui-select-match placeholder="Select or search a style in the list...">{{$select.selected.name}}</ui-select-match>
+          <ui-select-choices repeat="style in syntaxHighlightStyles | filter: $select.search">
+            <span ng-bind-html="style.name | highlight: $select.search | trustAsHtml"></span>
+            <small ng-bind-html="style.style | highlight: $select.search | trustAsHtml"></small>
+          </ui-select-choices>
+        </ui-select>
+      </div><!-- /.panel-body -->
+
+    </div><!-- /.panel -->
+
+  </form>
+
+</div><!-- /.modal-body -->
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-default" data-ng-click="close()">Close</button>
+  <button type="button" class="btn btn-primary" data-ng-click="save()">Save changes</button>
+</div><!-- /.modal-footer -->

@@ -1,0 +1,12 @@
+{
+    "brainfuck": "\\b(bf)$",
+    "cpp": "\\b(c|h|cpp|hpp)$",
+    "coffeescript": "\\b(coffee)$",
+    "handlebars": "\\b(hb)$",
+    "markdown": "\\b(md|mdown|mkd|mkdn|mdtext|mdtxt|txt|text)$",
+    "perl": "\\b(pl)$",
+    "python": "\\b(py)$",
+    "ruby": "\\b(rb)$",
+    "lisp": "\\b(scheme)$",
+    "bash": "\\b(sh|shell|ksh|tsh|csh|vb)$"
+}

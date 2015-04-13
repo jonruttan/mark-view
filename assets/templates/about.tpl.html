@@ -1,0 +1,42 @@
+<div class="modal-header">
+  <button type="button" class="close" data-ng-click="close()" aria-hidden="true">&times;</button>
+  <h4 class="modal-title">About {{manifest.name}}</h4>
+</div>
+
+<div class="modal-body">
+
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h2><span class="glyphicon glyphicon-eye-close"></span> {{manifest.name}} v{{manifest.version}}</h2>
+      </div>
+      <div class="panel-body">
+        <span>{{manifest.description}}</span>
+      </div>
+    </div>
+
+    <div class="panel panel-default">
+      <div id="options-syntax-highlight-label" class="panel-heading">Author</div>
+      <div class="panel-body">
+        <ul>
+          <li data-ng-bind-html="manifest.author | markdown"></li>
+        </ul>
+      </div><!-- /.panel-body -->
+    </div><!-- /.panel-default -->
+
+
+    <div class="panel panel-default" data-ng-repeat="group in assets">
+      <div id="options-syntax-highlight-label" class="panel-heading">{{group.name}}</div>
+      <div class="panel-body">
+        <ul data-ng-repeat="asset in group.assets">
+          <li><a href="{{asset.url}}">{{asset.name}}</a> {{asset.description}}</li>
+        </ul>
+      </div><!-- /.panel-body -->
+    </div><!-- /.panel-default -->
+
+</div><!-- /.modal-body -->
+
+{{test}}
+
+<div class="modal-footer">
+  <button type="button" class="btn btn-default btn-primary" data-ng-click="close()">Close</button>
+</div>

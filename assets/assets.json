@@ -1,0 +1,112 @@
+[
+  {
+    "name": "Included Components",
+    "assets": [
+      {
+        "name": "Twitter Bootstrap",
+        "url": "http://getbootstrap.com/",
+        "description": "layout and UI components"
+      },
+      {
+        "name": "AngularJS",
+        "url": "http://angularjs.org/",
+        "description": "structural framework for dynamic web apps"
+      },
+      {
+        "name": "AngularUI",
+        "url": "http://angular-ui.github.io/",
+        "description": "companion suites to the AngularJS framework"
+      },
+      {
+        "name": "Angular Scroll",
+        "url": "https://github.com/oblador/angular-scroll/",
+        "description": "scrollspy, animated scrollTo and scroll events for angular.js"
+      },
+      {
+        "name": "Lodash",
+        "url": "https://lodash.com/",
+        "description": "JavaScript utility library"
+      },
+      {
+        "name": "Underscore-db",
+        "url": "https://typicode.github.io/underscore-db/",
+        "description": "lightweight JavaScript database library for Node, node-webkit and the browser"
+      },
+      {
+        "name": "Pagedown",
+        "url": "https://github.com/ujifgc/pagedown",
+        "description": "converter that turns Markdown into HTML"
+      },
+      {
+        "name": "Pagedown Extra",
+        "url": "https://github.com/jonruttan/pagedown-extra",
+        "description": "plugins to enable support for Markdown Extra"
+      },
+      {
+        "name": "Highlight.js",
+        "url": "https://github.com/isagalaev/highlight.js",
+        "description": "syntax highlighter"
+      },
+      {
+        "name": "yaml.js",
+        "url": "https://github.com/jeremyfa/yaml.js",
+        "description": "standalone JavaScript YAML 1.2 Parser & Encoder"
+      },
+      {
+        "name": "Markdown Mark",
+        "url": "https://github.com/dcurtis/markdown-mark",
+        "description": "image"
+      }
+    ]
+  },
+  {
+    "name": "Development Components",
+    "assets": [
+      {
+        "name": "Node.js",
+        "url": "http://nodejs.org/",
+        "description": "JavaScript environment"
+      },
+      {
+        "name": "CoffeeScript",
+        "url": "http://coffeescript.org/",
+        "description": "JavaScript transcompiler"
+      },
+      {
+        "name": "Git",
+        "url": "http://git-scm.com/",
+        "description": "distributed version control system"
+      },
+      {
+        "name": "Bower",
+        "url": "http://bower.io/",
+        "description": "JavaScript package manager"
+      },
+      {
+        "name": "EditorConfig",
+        "url": "http://editorconfig.org/",
+        "description": "coding style file format and text editor plugins"
+      }
+    ]
+  },
+  {
+    "name": "Resources",
+    "assets": [
+      {
+        "name": "angular-seed",
+        "url": "https://github.com/angular/angular-seed",
+        "description": "application skeleton for a typical AngularJS web app"
+      }
+    ]
+  },
+  {
+    "name": "License",
+    "assets": [
+      {
+        "name": "(GPL-3.0)",
+        "url": "http://www.gnu.org/licenses/gpl-3.0-standalone.html",
+        "description": "GNU General Public License, version 3"
+      }
+    ]
+  }
+]

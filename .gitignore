@@ -1,0 +1,9 @@
+node_modules
+vendor
+docs
+logs/*
+*.log
+tmp
+
+# Sublime Text editor files
+*.sublime-*

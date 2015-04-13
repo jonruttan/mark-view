@@ -1,0 +1,35 @@
+{
+  "name": "MarkView",
+  "homepage": "https://github.com/jonruttan/markView",
+  "authors": [
+    "Jon Ruttan <jonruttan@gmail.com>"
+  ],
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular": "~1.3.0",
+    "angular-resource": "~1.3.0",
+    "angular-scroll": "~0.6.5",
+    "angular-ui-bootstrap-bower": "~0.12.1",
+    "angular-ui-select": "~0.11.2",
+    "bootstrap": "~3.3.4",
+    "highlightjs": "~8.5.0",
+    "jquery": "~2.1.3",
+    "lodash": "~2.4.1",
+    "ng-lodash": "~0.2.0",
+    "underscore-db": "~0.8.1",
+    "pagedown": "ujifgc/pagedown",
+    "pagedown-extra": "jonruttan/pagedown-extra",
+    "yaml.js": "~0.2.1"
+  },
+  "resolutions": {
+    "angular": "~1.3.0"
+  }
+}

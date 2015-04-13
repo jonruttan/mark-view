@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-controller="appController">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link rel="shortcut icon" href="/assets/images/icon.png">
+
+    <title data-ng-bind="title + ' - ' + manifest.name">Mark View</title>
+
+    <!-- Angular Content Security Policy CSS -->
+    <link href="/vendor/angular/angular-csp.css" rel="stylesheet">
+
+    <!-- Bootstrap core CSS -->
+    <link href="/vendor/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Bootstrap UI CSS -->
+    <link href="/vendor/angular-ui-select/dist/select.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="/assets/application.css" rel="stylesheet">
+
+    <!-- Syntax Highlighting CSS -->
+    <link href="/vendor/highlightjs/styles/default.css" ng-href="/vendor/highlightjs/styles/{{syntaxHighlight.style.id}}.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="/vendor/bootstrap/assets/js/html5shiv.js"></script>
+      <script src="/vendor/bootstrap/assets/js/respond.min.js"></script>
+    <![endif]-->
+  </head>
+
+  <body>
+    <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
+
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <!-- <img src="/assets/images/icon.png" height="50"> -->
+          <a class="navbar-brand" href="" data-ng-bind="manifest.name">Mark View</a>
+        </div>
+
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+            <!--li class="dropdown active">
+                <a data-toggle="dropdown" ng-click="onSyntaxHighlightStyle('File')">File<b class="caret"></b></a>
+                <ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+                  <li role="presentation"><a role="menuitem" ng-click="onSyntaxHighlightStyle('Save HTML')">Save HTML</a></li>
+                  <li role="presentation"><a role="menuitem" ng-click="onSyntaxHighlightStyle('Save PDF')">Save PDF</a></li>
+                </ul>
+            </li-->
+            <li><a href="" data-ng-click="openOptions()">Options</a></li>
+            <li><a href="" data-ng-click="openAbout()">About</a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container -->
+
+    </div><!-- /.navbar -->
+
+    <div class="container">
+      <div class="row">
+        <div class="col-md-9" role="main">
+          <div class="markdown-container" table-of-contents data-ng-model="body" data-ng-bind-html="body | trustAsHtml"></div>
+        </div>
+
+        <script type="text/ng-template" id="tableOfContentsTree">
+          <li data-ng-if="section.label">
+            <a ng-click="scrollTo(section)">{{section.label}}</a>
+          </li>
+          <ol data-ng-if="section.length > 1">
+            <span ng-repeat="section in section" ng-include="'tableOfContentsTree'"></span>
+          </ol>
+        </script>
+
+        <script type="text/ng-template" id="toc">
+          <a ng-click="scrollTo(section)">{{section.label}}</a>
+        </script>
+
+        <div class="col-md-3" role="complementary">
+          <div class="markdown-outline well hidden-xs hidden-sm affix">
+            <table>
+              <tr ng-repeat="(key, value) in meta">
+                <th>{{ key }}</th>
+                <td data-ng-bind-html="value | markdown"></td>
+              </tr>
+            </table>
+            <ol ng-repeat="section in sections" ng-include="'tableOfContentsTree'"></ol>
+
+            <!-- <div class="markdown-outline" data-ng-bind-html="outline | trustAsHtml"></div> -->
+
+            <ul class="nav">
+              <div id="markdown-backTop" onclick="window.scrollTo(0,0);"></div>
+            </ul>
+          </div><!--/.well -->
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <!--footer>
+        <p>&copy; Company 2013</p>
+      </footer-->
+
+    </div><!--/.container-->
+
+  </body>
+</html>
