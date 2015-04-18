@@ -111,12 +111,6 @@ angular.module 'interfaces', ['ngLodash']
       # Syntax highlighting
       if @options.syntaxHighlight? and @meta.Syntax?
         highlighter = new SyntaxHighlighter.highlightjs
-      #   syntax = @meta.Syntax ? 'no-highlight'
-
-      #   for lang, regexp of @syntaxAliases
-      #     if RegExp(regexp).test syntax
-      #       syntax = lang
-      #       break
 
         hl = top: undefined
         @html = @html.replace ///<pre><code>([\s\S]*?)</code></pre>///gm, (match, code) =>
