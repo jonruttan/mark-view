@@ -2,7 +2,7 @@ Title:    MarkView
 Keywords: [ #MarkView, #ChromeApp, #Markdown, #SyntaxHighlight ]  
 Author:   "[Jon Ruttan](jonruttan@gmail.com)"  
 Date:     2013-09-28  
-Revision: 3 (2015-04-12)  
+Revision: 4 (2015-04-17)  
 License:  "[GPL-3.0](http://www.gnu.org/licenses/gpl-3.0-standalone.html)"  
 
 # MarkView
@@ -30,12 +30,16 @@ coffee --watch --compile --output dist src/*
 
 ## Install
 
-  1. Install the plugin (as a developer): 
+  1. Download the MarkView files from [GitHub](https://github.com/jonruttan/mark-view).
+  2. Install the dependencies:
+    `cd mark-view`
+    `npm install`
+  3. Install the plugin (as a developer): 
   	1. Select *Tools ▸ Extensions*, or use the following link to open Chrome's [Extensions pane](chrome://extensions/).
   	2. Check the box beside *`Developer mode`* on the *Extensions* pane.
   	3. Press the *`Load unpacked extension...`* button, and select the directory the MarkView files are in.
-  2. Open Chrome's [Extensions pane](chrome://extensions/), and ensure the *`Allow access to file URLs`* checkbox is enabled.
-  3. Open or drag a `markdown` file to Chrome.
+  4. Open Chrome's [Extensions pane](chrome://extensions/), and ensure the *`Allow access to file URLs`* checkbox is enabled.
+  5. Open or drag a `markdown` file to Chrome.
 
 ## Resources
 
