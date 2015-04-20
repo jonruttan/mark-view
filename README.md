@@ -32,12 +32,12 @@ coffee --watch --compile --output dist src/*
 
   1. Download the MarkView files from [GitHub](https://github.com/jonruttan/mark-view).
   2. Install the dependencies:
-    `cd mark-view`
-    `npm install`
-  3. Install the plugin (as a developer): 
-  	1. Select *Tools ▸ Extensions*, or use the following link to open Chrome's [Extensions pane](chrome://extensions/).
-  	2. Check the box beside *`Developer mode`* on the *Extensions* pane.
-  	3. Press the *`Load unpacked extension...`* button, and select the directory the MarkView files are in.
+    - `cd mark-view`
+    - `bower install`
+  3. Install the plugin (as a developer):
+    1. Select *Tools ▸ Extensions*, or use the following link to open Chrome's [Extensions pane](chrome://extensions/).
+    2. Check the box beside *`Developer mode`* on the *Extensions* pane.
+    3. Press the *`Load unpacked extension...`* button, and select the directory the MarkView files are in.
   4. Open Chrome's [Extensions pane](chrome://extensions/), and ensure the *`Allow access to file URLs`* checkbox is enabled.
   5. Open or drag a `markdown` file to Chrome.
 
@@ -45,6 +45,7 @@ coffee --watch --compile --output dist src/*
 
   - <https://developer.chrome.com/apps/angular_framework>
   - <https://developer.chrome.com/extensions/content_scripts>
+  - [Bower](http://bower.io/)
 
 ### Code
 
