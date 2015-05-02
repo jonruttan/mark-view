@@ -108,7 +108,8 @@
     $scope.timeout = 333;
     converter = new $window.Markdown.Converter;
     $window.Markdown.Extra.init(converter, {
-      blockRenderer: (new SyntaxHighlighter.highlightjs).render
+      blockRenderer: (new SyntaxHighlighter.highlightjs).render,
+      extensions: ['fenced_code_gfm', 'tables', 'def_list', 'attr_list', 'footnotes', 'smartypants', 'strikethrough']
     });
     isLocalFile = false;
     isLocalFile = /^file:\/\//i.test(url);
@@ -215,7 +216,9 @@
         return;
       }
       converter = new Markdown.Converter;
-      Markdown.Extra.init(converter);
+      Markdown.Extra.init(converter, {
+        extensions: ['fenced_code_gfm', 'tables', 'def_list', 'attr_list', 'footnotes', 'smartypants', 'strikethrough']
+      });
       return $sce.trustAsHtml(converter.makeHtml(data));
     };
   });

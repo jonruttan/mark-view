@@ -125,6 +125,16 @@ app.controller 'appController', (
     converter = new $window.Markdown.Converter
     $window.Markdown.Extra.init converter,
       blockRenderer: (new SyntaxHighlighter.highlightjs).render
+      extensions: [
+        'fenced_code_gfm'
+        'tables'
+        'def_list'
+        'attr_list'
+        'footnotes'
+        'smartypants'
+        # 'newlines'
+        'strikethrough'
+      ]
 
     isLocalFile = false
     isLocalFile = /^file:\/\//i.test url
@@ -256,7 +266,17 @@ app.filter 'markdown',
       # Escaping* service the Html is trusted and is safe to be displayed via
       # the *ng-bind-html* directive.
       converter = new Markdown.Converter
-      Markdown.Extra.init converter
+      Markdown.Extra.init converter,
+          extensions: [
+            'fenced_code_gfm'
+            'tables'
+            'def_list'
+            'attr_list'
+            'footnotes'
+            'smartypants'
+            # 'newlines'
+            'strikethrough'
+          ]
       $sce.trustAsHtml converter.makeHtml data
 
 # ------------------------------------------------------------------------------
