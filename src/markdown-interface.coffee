@@ -36,10 +36,10 @@ angular.module 'interfaces', ['ngLodash']
       if entities.length > 2 then entities[entities.length-2] else null
 
     parseMeta: ->
-      results = @data.match /^(?:---$^)?[\s\S]*?$^(?:(?:---)|(?:\.\.\.)|\s*)$^/m
+      results = @data.match /(^(-{3,})?[\s\S]*?)^(?:\2|\.{3,})?$/m
       if results isnt null and results[0] isnt @data
         try
-          meta = YAML.parse results[0]
+          meta = YAML.parse results[1]
           for key, value of meta
             if key is null or value is null
               meta = {}
